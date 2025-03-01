@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #F5F8FA;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.dashboard-container {
+    display: flex;
+    flex: 1; /* This allows the main content to stretch */
+}
+
+.sidebar {
+    width: 300px;
+    background: #333333;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100vh; /* Sidebar takes full height */
+    position: sticky; /* Keeps sidebar fixed at the top */
+    top: 0;
+    bottom: 0;
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Logo Styling */
+.sidebar .logo {
+    text-align: center; /* Centers the logo */
+    margin-top: 0; /* Ensure no extra margin at the top */
+    padding-top: 0; /* Remove any padding at the top */
+}
+
+.sidebar .logo img {
+    height: 130px; /* Fixed height */
+    width: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures image is displayed as a block */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.sidebar .logo img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+/* Sidebar Stylish Links */
+.sidebar nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default text color */
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 25px;
+    gap: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    margin: 10px;
+}
+
+.sidebar nav ul li a i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #007BFF; /* Highlight text color */
+    transform: scale(1.02); /* Slightly enlarge the item */
+}
+
+.sidebar .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sidebar .submenu {
+    display: none;
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #ddd;
+}
+
+.sidebar .dropdown:hover .submenu {
+    display: block;
+}
+
+.sidebar .submenu li a {
+    color: #f0f0f0; /* Submenu default text color */
+    padding: 8px 15px;
+}
+
+.sidebar .submenu li a:hover {
+    color: #007BFF; /* Submenu hover text color */
+    background-color: #f9f9f9; /* Submenu hover background */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* Guide and Advice Card */
+.guide-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 95%; /* Keeps it responsive */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.guide-card h2 {
+    font-size: 2.5rem;
+    color: #FC2E20;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FC2E20;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.guide-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.guide-card ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.guide-card ul li strong {
+    color: #007BFF;
+}
+
+.guide-card ul li ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.guide-card ul li ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Card Styling for Table */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 95%; /* Adjust width for responsiveness */
+}
+
+.card h2 {
+    color: #333333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.table-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Keep tables stacked vertically */
+    align-items: stretch; /* Make sure tables stretch across the card */
+}
+
+.table-wrapper {
+    width: 100%; /* Ensure table takes full width inside card */
+    overflow-x: auto;
+    overflow-y: auto;  /* This ensures vertical scrolling */
+    margin-bottom: 20px; /* Space between tables */
+    max-height: 400px; /* Adjust height to limit the visible area and allow scrolling */
+    border: 1px solid #ddd; /* Optional border styling */
+    border-radius: 20px;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 100%; /* Ensure table takes up all available space */
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 12px; /* Better spacing */
+    border: 1px solid #ddd; /* Light border for structure */
+}
+
+table th {
+    background-color: #333333; /* Matches sidebar theme */
+    color: #ffffff; /* White text for readability */
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f5f5f5; /* Alternating row color for readability */
+}
+
+table tr:hover {
+    background-color: #e6f7ff; /* Highlight row on hover */
+}
+
+/* Form Actions Inside Table */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+select {
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 5px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+}

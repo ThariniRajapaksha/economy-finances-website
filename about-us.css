@@ -1,0 +1,281 @@
+/* Styles for the finance website */
+
+/* Styles for the finance website */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+html, body {
+    width: 100%; /* Ensures body and html take the full width of the screen */
+    margin: 0; /* Removes any margin that could cause overflow */
+    padding: 0; /* Removes any padding that could cause overflow */
+    min-height: 100vh; /* Ensures body takes full height of viewport */
+    display: flex; /* Ensures content stretches and footer can stick at the bottom */
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #14213D;
+    border-bottom: 2px solid #FCA311;
+    padding: 20px 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Header container to hold all elements */
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Image */
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 15px;
+}
+
+header .logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;
+    flex-grow: 1;  
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+/* Keep dropdown visible when hovering over both the dropdown and its menu */
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    list-style: none;
+    min-width: 150px;
+    top: 5px;  
+    left: 0; 
+    z-index: 1000;
+}
+
+/* Dropdown menu items with a gap */
+nav .dropdown-menu li {
+    margin-bottom: 5px; 
+}
+
+/* Optional: Remove margin from the last item */
+nav .dropdown-menu li:last-child {
+    margin-bottom: 0; 
+}
+
+nav .dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px 0;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+nav .dropdown-menu a:hover {
+    background-color: #f7f7f7;
+    color: #FCA311; 
+}
+
+
+/* Button style */
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* User Profile info aligned to the right */
+.user-info {
+    position: absolute;
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    color: #FCA311;
+    font-size: 1em;
+}
+
+/* Main Content Section */
+main {
+    padding: 40px 20px; /* Adds space around the main content */
+    background-color: #f9f9f9; /* Light background for the main content */
+    flex-grow: 1; /* Ensures the main content stretches to fill available space */
+}
+
+/* About Us Section */
+.about-us {
+    max-width: 1200px; /* Limits the width of the content */
+    margin: 0 auto; /* Centers the content */
+    background-color: white; /* White background for the content */
+    padding: 20px; /* Adds padding inside the section */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the section */
+}
+
+/* Title for About Us */
+.about-us h1 {
+    font-size: 2.5em; /* Makes the heading larger */
+    color: #FC2E20; 
+    margin-bottom: 20px; /* Adds space below the title */
+    text-align: center; /* Centers the title */
+}
+
+/* Paragraphs in About Us */
+.about-us p {
+    font-size: 1.1em; /* Makes the text slightly larger */
+    line-height: 1.6; /* Increases line spacing for readability */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Adds space after each paragraph */
+}
+
+/* Subheading style */
+.about-us h2 {
+    font-size: 1.8em; /* Slightly smaller than the main title */
+    color: #D10000; /* Purple color */
+    margin-top: 40px; /* Adds space above subheadings */
+    margin-bottom: 15px; /* Adds space below subheadings */
+}
+
+/* About Image */
+.about-image {
+    text-align: center; /* Centers the image */
+    margin-bottom: 30px; /* Adds space below the image */
+}
+
+.about-img {
+    width: 100%; /* Ensures the image is responsive */
+    max-width: 800px; /* Limits the maximum width */
+    height: auto; /* Keeps the aspect ratio intact */
+    border-radius: 8px; /* Optional: Rounds the corners of the image */
+}
+
+/* Why Choose Us List */
+.about-us ul {
+    list-style: none; /* Removes default bullet points */
+    padding: 0; /* Removes padding */
+}
+
+.about-us li {
+    font-size: 1.1em; /* Increases font size for readability */
+    line-height: 1.6; /* Increases line height */
+    color: #333; /* Dark text color */
+    margin-bottom: 15px; /* Adds space between items */
+}
+
+.about-us li strong {
+    color: #FF2E2E; /* Purple color for bolded text */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #333333; /* Purple color to match the theme */
+    margin: 20px 0; /* Adds spacing above and below the line */
+    width: 100%; /* Adjusts width for a clean look */
+    margin-left: auto; /* Centers the line */
+    margin-right: auto; /* Centers the line */
+}
+
+/* Footer Section */
+footer {
+    background-color: #14213D;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row; 
+    gap: 150px; 
+    flex-wrap: wrap; 
+}
+
+.footer-left h3 {
+    margin-bottom: 10px; 
+    color: #FCA311; 
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-left li {
+    margin-bottom: 10px; 
+    color: white;
+}
+
+.footer-left a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer-left a:hover {
+    color: #FCA311; 
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 0;
+    color: white;
+}
+
+/* Logo in Footer */
+.footer-right a img {
+    width: 100px; 
+    margin-top: 10px; 
+    display: inline-block; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; 
+}
+
+.footer-right a img:hover {
+    transform: scale(1.1); 
+}
+
+
+
+

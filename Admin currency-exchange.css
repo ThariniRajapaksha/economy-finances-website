@@ -1,0 +1,303 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #F5F8FA;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.dashboard-container {
+    display: flex;
+    flex: 1; /* This allows the main content to stretch */
+}
+
+.sidebar {
+    width: 300px;
+    background: #333333;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100vh; /* Sidebar takes full height */
+    position: sticky; /* Keeps sidebar fixed at the top */
+    top: 0;
+    bottom: 0;
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Logo Styling */
+.sidebar .logo {
+    text-align: center; /* Centers the logo */
+    margin-top: 0; /* Ensure no extra margin at the top */
+    padding-top: 0; /* Remove any padding at the top */
+}
+
+.sidebar .logo img {
+    height: 130px; /* Fixed height */
+    width: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures image is displayed as a block */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.sidebar .logo img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+/* Sidebar Stylish Links */
+.sidebar nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default text color */
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 25px;
+    gap: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    margin: 10px;
+}
+
+.sidebar nav ul li a i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #007BFF; /* Highlight text color */
+    transform: scale(1.02); /* Slightly enlarge the item */
+}
+
+.sidebar .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sidebar .submenu {
+    display: none;
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #ddd;
+}
+
+.sidebar .dropdown:hover .submenu {
+    display: block;
+}
+
+.sidebar .submenu li a {
+    color: #f0f0f0; /* Submenu default text color */
+    padding: 8px 15px;
+}
+
+.sidebar .submenu li a:hover {
+    color: #007BFF; /* Submenu hover text color */
+    background-color: #f9f9f9; /* Submenu hover background */
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow-x: auto; /* Handles overflow for the table on smaller screens */
+}
+
+.main-content h1{
+    color: #007BFF;
+}
+
+/* Admin Guide Section */
+.admin-guide {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    font-size: 16px; /* Default font size for readability */
+    line-height: 1.6; /* Comfortable line height for readability */
+}
+
+.admin-guide p {
+    margin-bottom: 15px; /* Space below paragraphs */
+    color: #555; /* Darker grey text for paragraphs */
+}
+
+.admin-guide ul {
+    list-style: disc inside; /* Bullets with indentation */
+    margin-left: 20px; /* Spacing for the list */
+    color: #333; /* Slightly darker text for list items */
+}
+
+.admin-guide ul li {
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 5px; /* Slight padding for better alignment */
+}
+
+.admin-guide ul li strong {
+    color: #FF5C5C; /* Highlighted text in blue */
+}
+
+.admin-guide ul li:hover {
+    background-color: #eef; /* Light blue background on hover */
+    border-radius: 5px; /* Rounded edges for hover effect */
+}
+
+.admin-guide a {
+    color: #007BFF; /* Link color matches the design theme */
+    text-decoration: none; /* Remove underline */
+}
+
+.admin-guide a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Headings within the Admin Guide */
+.admin-guide h1, 
+.admin-guide h2, 
+.admin-guide h3 {
+    margin-bottom: 15px;
+    color: #333; /* Darker text for headings */
+    font-weight: bold;
+}
+
+.admin-guide h1 {
+    font-size: 24px; /* Larger font for main heading */
+}
+
+.admin-guide h2 {
+    font-size: 20px; /* Slightly smaller font for subheadings */
+}
+
+.admin-guide h3 {
+    font-size: 18px; /* Smaller for tertiary headings */
+}
+
+/* Highlight Important Notes */
+.admin-guide .note {
+    background-color: #fffae5; /* Soft yellow background */
+    border-left: 5px solid #ffc107; /* Yellow border for emphasis */
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #856404; /* Dark yellow text color */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light background for table */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures rounded corners apply */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #5C5CFF; /* Blue background for headers */
+    color: #fff; /* White text for headers */
+}
+
+table th, table td {
+    text-align: left;
+    padding: 10px 15px;
+    border: 1px solid #ddd; /* Light grey border */
+    font-size: 14px;
+}
+
+table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row colors */
+}
+
+table tbody tr:hover {
+    background-color: #eef; /* Light blue hover effect */
+}
+
+/* Input Field Styling */
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #007BFF; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Container for the button */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    margin-top: 20px; /* Add some spacing at the top */
+}
+
+/* Button Styling */
+.btn-update {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* White text */
+    background-color: #5C5CFF; /* Blue background */
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-update:hover {
+    background-color: #2E2EFF; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.btn-update:active {
+    transform: scale(0.98); /* Slight press effect */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 8px;
+    }
+
+    input[type="number"] {
+        font-size: 12px;
+    }
+
+    .btn-update {
+        width: 100%; /* Full-width button on smaller screens */
+        font-size: 14px;
+    }
+}

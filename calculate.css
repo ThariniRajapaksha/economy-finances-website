@@ -1,0 +1,315 @@
+/* Styles for the finance website */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url("Images/Calculate.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+html, body {
+    width: 100%; /* Ensures body and html take the full width of the screen */
+    margin: 0; /* Removes any margin that could cause overflow */
+    padding: 0; /* Removes any padding that could cause overflow */
+    min-height: 100vh; /* Ensures body takes full height of viewport */
+    display: flex; /* Ensures content stretches and footer can stick at the bottom */
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #14213D;
+    border-bottom: 2px solid #FCA311;
+    padding: 20px 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Header container to hold all elements */
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Image */
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 15px;
+}
+
+header .logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;
+    flex-grow: 1;  
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+/* Keep dropdown visible when hovering over both the dropdown and its menu */
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    list-style: none;
+    min-width: 150px;
+    top: 5px;  
+    left: 0; 
+    z-index: 1000;
+}
+
+/* Dropdown menu items with a gap */
+nav .dropdown-menu li {
+    margin-bottom: 5px; 
+}
+
+/* Optional: Remove margin from the last item */
+nav .dropdown-menu li:last-child {
+    margin-bottom: 0; 
+}
+
+nav .dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px 0;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+nav .dropdown-menu a:hover {
+    background-color: #f7f7f7;
+    color: #FCA311; 
+}
+
+
+/* Button style */
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* User Profile info aligned to the right */
+.user-info {
+    position: absolute;
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    color: #FCA311;
+    font-size: 1em;
+}
+
+/* Calculator container styles */
+.calculator-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title */
+.calculator-container h2 {
+    margin-bottom: 20px;
+    color: #2d3748;
+    font-size: 28px;
+    text-align: left; /* Align title to the left */
+}
+
+/* Dropdown selector */
+.calculator-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+#calculator-select {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #0f82ff;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #f7fafc;
+    cursor: pointer;
+}
+
+/* Calculator sections */
+section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #0f82ff;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1c1c1c, #333333);
+    display: none;
+    text-align: left; /* Align form content to the left */
+}
+
+/* Form elements */
+.calculator-container form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.calculator-container form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #0f82ff;
+    border-radius: 205px;
+    font-size: 16px;
+    background-color: transparent;
+    text-align: left; /* Align input text to the left */
+    color: white;
+}
+
+.calculator-container h3{
+    color: white;
+}
+
+/* Buttons */
+.calculator-container button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FCA311;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.calculator-container button:hover {
+    background-color: #003060;
+}
+
+/* Results */
+.calculator-container p {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    text-align: left; /* Align results text to the left */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 15px;
+    }
+
+    form input,
+    #calculator-select,
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #14213D;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row; 
+    gap: 150px; 
+    flex-wrap: wrap; 
+}
+
+.footer-left h3 {
+    margin-bottom: 10px; 
+    color: #FCA311; 
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-left li {
+    margin-bottom: 10px; 
+    color: white;
+}
+
+.footer-left a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer-left a:hover {
+    color: #FCA311; 
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 0;
+    color: white;
+}
+
+/* Logo in Footer */
+.footer-right a img {
+    width: 100px; 
+    margin-top: 10px; 
+    display: inline-block; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; 
+}
+
+.footer-right a img:hover {
+    transform: scale(1.1); 
+}
+
+
+
+
+

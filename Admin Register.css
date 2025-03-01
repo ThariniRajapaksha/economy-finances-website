@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #D16BA5, #86A8E7, #5FFBF1); /* Smooth gradient */
+    background-size: 400% 400%; /* For dynamic effects */
+    animation: gradientBackground 15s ease infinite; /* Animate gradient */
+    color: #fff;
+}
+
+/* Gradient animation */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Add a dark overlay on top of the background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 20px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 80px; 
+    position: relative;
+}
+
+/* Logo Image */
+header .logo {
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+    padding-left: 10px; 
+}
+
+header .logo img {
+    height: 90px; 
+    width: auto; 
+    display: block; 
+}
+
+
+/* Main Container */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    position: relative; 
+    z-index: 1; 
+}
+
+.login-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-left {
+    flex: 1;
+    background: url('Images/Admin\ 2.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-right {
+    flex: 1;
+    padding: 40px;
+}
+
+.login-right h2 {
+    margin-bottom: 20px;
+    color: #0E86D4;
+    font-size: 2.5em;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.login-btn {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    background-color: #0E86D4;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #003060;
+}
+
+.signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-link a {
+    color: #050A30;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}

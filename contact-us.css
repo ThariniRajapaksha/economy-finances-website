@@ -1,0 +1,328 @@
+/* Styles for the finance website */
+
+/* Styles for the finance website */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+html, body {
+    width: 100%; /* Ensures body and html take the full width of the screen */
+    margin: 0; /* Removes any margin that could cause overflow */
+    padding: 0; /* Removes any padding that could cause overflow */
+    min-height: 100vh; /* Ensures body takes full height of viewport */
+    display: flex; /* Ensures content stretches and footer can stick at the bottom */
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #14213D;
+    border-bottom: 2px solid #FCA311;
+    padding: 20px 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Header container to hold all elements */
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Image */
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 15px;
+}
+
+header .logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;
+    flex-grow: 1;  
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+/* Keep dropdown visible when hovering over both the dropdown and its menu */
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    list-style: none;
+    min-width: 150px;
+    top: 5px;  
+    left: 0; 
+    z-index: 1000;
+}
+
+/* Dropdown menu items with a gap */
+nav .dropdown-menu li {
+    margin-bottom: 5px; 
+}
+
+/* Optional: Remove margin from the last item */
+nav .dropdown-menu li:last-child {
+    margin-bottom: 0; 
+}
+
+nav .dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px 0;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+nav .dropdown-menu a:hover {
+    background-color: #f7f7f7;
+    color: #FCA311; 
+}
+
+
+/* Button style */
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* User Profile info aligned to the right */
+.user-info {
+    position: absolute;
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    color: #FCA311;
+    font-size: 1em;
+}
+
+/* General Form Style */
+.contact-us {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Style */
+.contact-us h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #FCA311;
+    margin-bottom: 20px;
+}
+
+/* Image Style */
+.contact-image {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.contact-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 65%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FCA311;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+/* Textarea Style */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 15px 30px;
+    background-color: #145DA0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 25%;
+}
+
+.submit-btn:hover {
+    background-color: #003060;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .contact-us {
+        padding: 20px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1em;
+    }
+}
+
+.success {
+    color: green;
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #333333; /* Purple color to match the theme */
+    margin: 20px 0; /* Adds spacing above and below the line */
+    width: 100%; /* Adjusts width for a clean look */
+    margin-left: auto; /* Centers the line */
+    margin-right: auto; /* Centers the line */
+}
+
+/* Footer Section */
+footer {
+    background-color: #14213D;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row; 
+    gap: 150px; 
+    flex-wrap: wrap; 
+}
+
+.footer-left h3 {
+    margin-bottom: 10px; 
+    color: #FCA311; 
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-left li {
+    margin-bottom: 10px; 
+    color: white;
+}
+
+.footer-left a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer-left a:hover {
+    color: #FCA311; 
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 0;
+    color: white;
+}
+
+/* Logo in Footer */
+.footer-right a img {
+    width: 100px; 
+    margin-top: 10px; 
+    display: inline-block; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; 
+}
+
+.footer-right a img:hover {
+    transform: scale(1.1); 
+}
+
+
+

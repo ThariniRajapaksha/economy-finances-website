@@ -1,0 +1,347 @@
+/* Styles for the finance website */
+
+/* Styles for the finance website */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+html, body {
+    width: 100%; /* Ensures body and html take the full width of the screen */
+    margin: 0; /* Removes any margin that could cause overflow */
+    padding: 0; /* Removes any padding that could cause overflow */
+    min-height: 100vh; /* Ensures body takes full height of viewport */
+    display: flex; /* Ensures content stretches and footer can stick at the bottom */
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #14213D;
+    border-bottom: 2px solid #FCA311;
+    padding: 20px 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Header container to hold all elements */
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Image */
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 15px;
+}
+
+header .logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;
+    flex-grow: 1;  
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+/* Keep dropdown visible when hovering over both the dropdown and its menu */
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    list-style: none;
+    min-width: 150px;
+    top: 5px;  
+    left: 0; 
+    z-index: 1000;
+}
+
+/* Dropdown menu items with a gap */
+nav .dropdown-menu li {
+    margin-bottom: 5px; 
+}
+
+/* Optional: Remove margin from the last item */
+nav .dropdown-menu li:last-child {
+    margin-bottom: 0; 
+}
+
+nav .dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px 0;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+nav .dropdown-menu a:hover {
+    background-color: #f7f7f7;
+    color: #FCA311; 
+}
+
+
+/* Button style */
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* User Profile info aligned to the right */
+.user-info {
+    position: absolute;
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    color: #FCA311;
+    font-size: 1em;
+}
+
+/* Main Section Styles */
+main {
+    background-color: #f9f9f9;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Mortgage Section Styles */
+.mortgage-section {
+    text-align: left; /* Aligns all content within the section to the left */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 100%; /* Optional: Limits the width for better readability */
+    margin-left: auto; /* Centers the container horizontally */
+    margin-right: auto; /* Centers the container horizontally */
+}
+
+.mortgage-section h1,
+.mortgage-section h2,
+.mortgage-section ul,
+.mortgage-section p {
+    text-align: left; /* Ensure all headings, lists, and paragraphs are aligned left */
+}
+
+.mortgage-section ul {
+    margin: 0 auto;
+    list-style: disc;
+    padding-left: 20px; /* Adds spacing for list indentation */
+}
+
+.mortgage-section h1 {
+    color: #FC2E20;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.mortgage-section h2 {
+    color: #FCA311;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.mortgage-section p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.mortgage-section li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.mortgage-image {
+    width: 50%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mortgage Application Form Styles */
+.mortgage-section form {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0; /* Removes automatic centering */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left; /* Ensures all form elements inside are left-aligned */
+    width: 100%; /* Ensure form takes full width of its container */
+    margin-left: 0; /* Aligns form to the left */
+}
+
+.mortgage-section form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.mortgage-section form input,
+.mortgage-section form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mortgage-section form input:focus,
+.mortgage-section form select:focus {
+    border-color: #FCA311;
+    outline: none;
+}
+
+.mortgage-section .form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mortgage-section .form-buttons button {
+    background-color: #055C9D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mortgage-section .form-buttons button:hover {
+    background-color: #003060;
+}
+
+/* Form button reset */
+.mortgage-section .form-buttons button[type="reset"] {
+    background-color: #ddd;
+    color: #333;
+}
+
+.mortgage-section .form-buttons button[type="reset"]:hover {
+    background-color: #bbb;
+}
+
+
+/* Horizontal Line Styles */
+hr {
+    border: none;
+    border-top: 1px solid #333333; /* Purple color to match the theme */
+    margin: 20px 0; /* Adds spacing above and below the line */
+    width: 100%; /* Adjusts width for a clean look */
+    margin-left: auto; /* Centers the line */
+    margin-right: auto; /* Centers the line */
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #14213D;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row; 
+    gap: 150px; 
+    flex-wrap: wrap; 
+}
+
+.footer-left h3 {
+    margin-bottom: 10px; 
+    color: #FCA311; 
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-left li {
+    margin-bottom: 10px; 
+    color: white;
+}
+
+.footer-left a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer-left a:hover {
+    color: #FCA311; 
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 0;
+    color: white;
+}
+
+/* Logo in Footer */
+.footer-right a img {
+    width: 100px; 
+    margin-top: 10px; 
+    display: inline-block; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; 
+}
+
+.footer-right a img:hover {
+    transform: scale(1.1); 
+}
+
+
+
